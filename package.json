@@ -1,7 +1,7 @@
 {
   "name": "music.163.com",
   "version": "0.0.1",
-  "description": "shortcut bookmark of music.163.com.",
+  "description": "🎵shortcut bookmark of music.163.com.",
   "main": "",
   "scripts": {
     "build": "rollup --config"
