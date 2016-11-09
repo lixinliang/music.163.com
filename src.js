@@ -9,7 +9,7 @@
     let panel = $('[data-action="panel"]');
 
     function onKeydown ( event ) {
-        if (!event.target.matches('input,textatea,[data-action]')) {
+        if (!event.target.matches('input,textarea,[data-action]')) {
             if (event.keyCode == 32) {
                 play.click();
                 event.preventDefault();

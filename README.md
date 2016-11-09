@@ -8,7 +8,7 @@
 #### 1. 打开Chrome，`cmd + D`（添加书签），点击修改，名字随意，网址拷贝以下代码（或者`dist.js`的内容）。
 
 ```javascript
-javascript:!function(){function t(t){if(!t.target.matches("input,textatea,[data-action]")){if(32==t.keyCode)return i.click(),t.preventDefault(),!1;if(37==t.keyCode)return o.click(),!1;if(39==t.keyCode)return c.click(),!1;if(13==t.keyCode)return r.click(),!1}}function e(){[a,d.contentWindow.document].forEach(function(e){void 0===e.body.dataset.keybind&&(e.body.dataset.keybind="",e.addEventListener("keydown",t,!1))})}var a=document,n=document.querySelector.bind(a),d=n("iframe"),i=n('[data-action="play"],[data-action="pause"]'),o=n('[data-action="prev"]'),c=n('[data-action="next"]'),r=n('[data-action="panel"]');e(),d.addEventListener("load",e,!1)}();
+javascript:!function(){function t(t){if(!t.target.matches("input,textarea,[data-action]")){if(32==t.keyCode)return i.click(),t.preventDefault(),!1;if(37==t.keyCode)return o.click(),!1;if(39==t.keyCode)return c.click(),!1;if(13==t.keyCode)return r.click(),!1}}function e(){[a,d.contentWindow.document].forEach(function(e){void 0===e.body.dataset.keybind&&(e.body.dataset.keybind="",e.addEventListener("keydown",t,!1))})}var a=document,n=document.querySelector.bind(a),d=n("iframe"),i=n('[data-action="play"],[data-action="pause"]'),o=n('[data-action="prev"]'),c=n('[data-action="next"]'),r=n('[data-action="panel"]');e(),d.addEventListener("load",e,!1)}();
 ```
 
 #### 2. 打开[http://music.163.com](http://music.163.com)，点击你创建的书签（执行代码）。
