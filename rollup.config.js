@@ -1,22 +1,19 @@
 'use strict';
 
+import sass from 'rollup-plugin-sass';
 import babel from 'rollup-plugin-babel';
+import image from 'rollup-plugin-image';
 import uglify from 'rollup-plugin-uglify';
+import bookmark from 'rollup-plugin-bookmark';
 
 export default {
-    entry : './src.js',
+    entry : './src/index.js',
     plugins : [
+        sass(),
         babel(),
+        image(),
         uglify(),
-        {
-            name : 'bookmark',
-            transformBundle : function ( code ) {
-                code = 'javascript:' + code;
-                return {
-                    code,
-                };
-            },
-        },
+        bookmark(),
     ],
     dest : 'dist.js',
 };
