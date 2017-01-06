@@ -7,6 +7,8 @@ import uglify from 'rollup-plugin-uglify';
 import bookmark from 'rollup-plugin-bookmark';
 
 export default {
+    format : 'iife',
+    dest : 'dist.js',
     entry : './src/index.js',
     plugins : [
         sass(),
@@ -15,5 +17,4 @@ export default {
         uglify(),
         bookmark(),
     ],
-    dest : 'dist.js',
 };
