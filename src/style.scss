@@ -15,7 +15,7 @@ body[data-shortcut] {
     & > canvas[data-bubble] {
         position: fixed;
         right: 0;
-        bottom: 55px;
+        bottom: 60px;
         width: 50px + 16 * 2;
         height: 350px;
         z-index: 999;
