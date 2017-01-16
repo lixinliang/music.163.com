@@ -5,6 +5,8 @@ import babel from 'rollup-plugin-babel';
 import image from 'rollup-plugin-image';
 import uglify from 'rollup-plugin-uglify';
 import bookmark from 'rollup-plugin-bookmark';
+import commonjs from 'rollup-plugin-commonjs';
+import nodeResolve from 'rollup-plugin-node-resolve';
 
 export default {
     format : 'iife',
@@ -16,5 +18,12 @@ export default {
         image(),
         uglify(),
         bookmark(),
+        commonjs({
+            sourceMap : false,
+        }),
+        nodeResolve({
+            jsnext : true,
+            main : true,
+        }),
     ],
 };
