@@ -17,6 +17,10 @@
 | `↵` | display/hide playlist |
 | `Tab` | focus/blur search input |
 
+## Preview
+
+![preview](./src/music.gif)
+
 ## Usage
 
 ###### 1. 打开Chrome，`cmd + D`（添加书签），点击修改，名字随意，网址拷贝以下代码（或者[`dist.js`](https://raw.githubusercontent.com/lixinliang/music.163.com/master/dist.js)的内容）。
