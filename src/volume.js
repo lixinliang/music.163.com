@@ -42,12 +42,12 @@ export default {
         }, false);
 
         // HACK: Audio element is closure, rewrite a function to exposure
-        let anonymous = window.bO.oF;
+        let anonymous = window.$$HACK$$;
         let setVolume = () => {};
-        window.bO.oF = function () {
+        window.$$HACK$$ = function () {
             console.log('HACK succesfully!');
             setVolume = anonymous.bind(this);
-            window.bO.oF = anonymous;
+            window.$$HACK$$ = anonymous;
         };
 
         // HACK: Trigger it
