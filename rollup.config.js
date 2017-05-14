@@ -6,6 +6,7 @@ import sass from 'rollup-plugin-sass';
 import babel from 'rollup-plugin-babel';
 import image from 'rollup-plugin-image';
 import uglify from 'rollup-plugin-uglify';
+import replace from 'rollup-plugin-replace';
 import bookmark from 'rollup-plugin-bookmark';
 import commonjs from 'rollup-plugin-commonjs';
 import nodeResolve from 'rollup-plugin-node-resolve';
@@ -19,6 +20,12 @@ export default {
         babel(),
         image(),
         uglify(),
+        replace({
+            delimiters: ['$$', '$$'],
+            // 2017-05-11 18:16:15
+            // K0x.lc4g
+            HACK : 'K0x.lc4g',
+        }),
         bookmark(),
         commonjs({
             sourceMap : false,
