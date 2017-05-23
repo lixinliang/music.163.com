@@ -28,6 +28,9 @@ export default {
             // 2017-05-19 16:50:34
             // K3x.lj7c
             HACK : 'K3x.lj7c',
+            // 2017-05-23 10:03:04
+            // K6E.lz2x
+            HACK : 'K6E.lz2x',
         }),
         bookmark(),
         commonjs({
