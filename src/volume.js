@@ -3,6 +3,7 @@ import {
     on,
     doc,
 } from './variable.js';
+import hack from './hack.js';
 
 const delay = 2000;
 
@@ -42,12 +43,13 @@ export default {
         }, false);
 
         // HACK: Audio element is closure, rewrite a function to exposure
-        let anonymous = window.$$HACK$$;
+        let [ foo, bar ] = hack();
+        let anonymous = window[foo][bar];
         let setVolume = () => {};
-        window.$$HACK$$ = function () {
+        window[foo][bar] = function () {
             console.log('HACK succesfully!');
             setVolume = anonymous.bind(this);
-            window.$$HACK$$ = anonymous;
+            window[foo][bar] = anonymous;
         };
 
         // HACK: Trigger it
