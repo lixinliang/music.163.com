@@ -5,8 +5,7 @@ import path from 'path';
 import sass from 'rollup-plugin-sass';
 import babel from 'rollup-plugin-babel';
 import image from 'rollup-plugin-image';
-import uglify from 'rollup-plugin-uglify';
-import replace from 'rollup-plugin-replace';
+import uglify from 'rollup-plugin-uglify-es';
 import bookmark from 'rollup-plugin-bookmark';
 import commonjs from 'rollup-plugin-commonjs';
 import nodeResolve from 'rollup-plugin-node-resolve';
@@ -17,21 +16,11 @@ export default {
     entry : './src/index.js',
     plugins : [
         sass(),
-        babel(),
+        babel({
+            exclude : 'src/hack.js',
+        }),
         image(),
         uglify(),
-        replace({
-            delimiters: ['$$', '$$'],
-            // 2017-05-11 18:16:15
-            // K0x.lc4g
-            HACK : 'K0x.lc4g',
-            // 2017-05-19 16:50:34
-            // K3x.lj7c
-            HACK : 'K3x.lj7c',
-            // 2017-05-23 10:03:04
-            // K6E.lz2x
-            HACK : 'K6E.lz2x',
-        }),
         bookmark(),
         commonjs({
             sourceMap : false,
