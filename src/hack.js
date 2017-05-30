@@ -8,7 +8,7 @@
  * 6. 匹配成功后 获取的方法名 写到 rollup 的配置文件中 并且在打包后 注入代码
  */
 
-export default function () {
+export default new Function(`
     for (let [key, value] of Array.from(window)) {
         if (Object.prototype.toString.call(value) == '[object Object]') {
             for (let [method, foo] of value) {
@@ -21,5 +21,4 @@ export default function () {
             }
         }
     };
-    return ['', ''];
-}
+`);
