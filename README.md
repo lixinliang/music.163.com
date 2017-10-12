@@ -47,3 +47,7 @@ javascript:!function(){var t=document.createElement("script");t.charset="utf-8",
 
 * 源码在`src.js`，可自行订制。
 * 使用`$ npm run build`来构建代码。
+
+## License
+
+MIT
